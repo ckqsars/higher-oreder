@@ -29,6 +29,7 @@ def main(NodeFile):
     stdin = sys.stdin if NodeFile is None else open(NodeFile)
     
     
+    
     outDict = {}
     splitlist = []
     for obj in ReadData(stdin, '\t'):
@@ -48,7 +49,7 @@ def main(NodeFile):
             if index2 not in splitlist:
                 outlist = outDict[index]
                 outlist2 = outDict[index2]
-                commonlist = getcommon(outlist,outlist2)
+                commonlist = getcommon(outlist, outlist2)
                 lenCommon = len(commonlist)
                 for i in range(lenCommon):
                     for j in range(i):
@@ -58,6 +59,8 @@ def main(NodeFile):
         setmotif = set(motifDict[index].split(' '))
         if setmotif == set([94,95,61,67]):
             print index
+
+    print numMotif
 
 if __name__ =="__main__":
     NodeFile = '/home/ckqsars/workspace/high_order/data/NodeGraph131.txt'

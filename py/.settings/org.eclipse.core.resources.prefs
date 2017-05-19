@@ -1,8 +1,17 @@
 eclipse.preferences.version=1
+encoding/GetEdge.py=utf-8
 encoding/GetGraph.py=utf-8
 encoding/GetMotif.py=utf-8
 encoding/GetMotifGraph.py=utf-8
+encoding/PickMotif.py=utf-8
+encoding/all_nodes_add_one.py=utf-8
 encoding/caluTheS.py=utf-8
 encoding/changeFilestyle.py=utf-8
 encoding/changematrix.py=utf-8
+encoding/countNMI.py=utf-8
+encoding/dbscan.py=utf-8
+encoding/k_means.py=utf-8
 encoding/motif_importance.py=utf-8
+encoding/recursive10nodes.py=utf-8
+encoding/recursive11nodes.py=utf-8
+encoding/recursive131nodes.py=utf-8
