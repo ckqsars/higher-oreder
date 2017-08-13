@@ -24,10 +24,11 @@ def main(data, out, k):
         max = 0
         oldimax = imax
         for i in range(imax,len(datalist) -1):
+        # for i in range(0,imax-1):
             if max < float(datalist[i][1]) - float(datalist[i+1][1]):
                 max = float(datalist[i][1]) - float(datalist[i+1][1])
                 imax = i + 1
-
+        print max,imax
         for j in range(oldimax, imax):
             clusterlist.append([datalist[j][0],k])
         k= k -1
@@ -43,7 +44,7 @@ def main(data, out, k):
 
 
 if __name__ == "__main__":
-    data ='../result/food_web/result_.txt'
-    out = '../result/food_web/result_bi_partition_7.txt'
+    data = '../result/result_131/result_node_0804.txt'
+    out = '../result/result_131/result_node_0804_pa.txt'
     k = 6
     main(data, out , k)
