@@ -8,8 +8,8 @@ import math
 
 
 def main():
-    file = '/home/ckqsars/workspace/high_order/data/karate.motif3_graph.txt'
-    outfile = '/home/ckqsars/workspace/high_order/result/karate/result_motif.txt'
+    file = '../data/karate.motif3_graph.txt'
+    outfile = '../result/karate/result_motif.txt'
     fr = open(file)
     fp = open(outfile, 'w+')
     dictnode = {}

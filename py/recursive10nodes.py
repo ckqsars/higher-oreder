@@ -8,8 +8,8 @@ import math
 
 
 def main():
-    file = '/home/ckqsars/workspace/high_order/data/graph1.txt'
-    outfile = '/home/ckqsars/workspace/high_order/result/result_10/result_node_temp.txt'
+    file = '../data/graph1.txt'
+    outfile = '../result/result_10/result_node_temp.txt'
     #outfile='/home/ckqsars/workspace/high_order/result/result_10/result_motif.txt'
     fr = open(file)
     fp = open(outfile,'w+')
@@ -43,8 +43,8 @@ def main():
     motifsValue0 = motifsValue
     nodesValue0 = nodesValue
     
-    oldMotifsValue = motifsValue
-    oldNodesValue = nodesValue
+    oldMotifsValue = motifsValue.copy()
+    oldNodesValue = nodesValue.copy()
     
     newMotifValue = {}
     newNodeValue = {}

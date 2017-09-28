@@ -52,7 +52,7 @@ def main():
         nodesValue[index] = len(dictnode[index])
 
     for index in dictmotif:
-        temp = 0
+        temp = 3
         for t in dictmotif[index]:
             temp = 1.0 / len(dictnode[t]) + temp
         motifsValue[index] = temp
