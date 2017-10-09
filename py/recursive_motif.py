@@ -7,9 +7,8 @@
 
 class recursive_motif(object):
 
-    def __init__(self, datafile, outfile, delimiter, motifEle):
+    def __init__(self, datafile, delimiter, motifEle):
         self.datafile = datafile
-        self.outfile = outfile
         self.delimiter = delimiter
         self.dictnode = {}
         self.dictmotif = {}
@@ -50,7 +49,7 @@ class recursive_motif(object):
     def Iteration(self, n):
         self.oldNodeValue = self.nodesValue0.copy()
         self.oldMotifValue = self.motifsValue0.copy()
-
+        n = int(n)
         for i in range(n):
             for index in self.oldNodeValue:
                 sumdata = 0

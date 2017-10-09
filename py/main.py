@@ -8,11 +8,26 @@
 
 import recursive_motif
 from optparse import OptionParser
+import settings
 import sys
 
 
+'''
+the main is the example of how to use the class recursive_motif
+we can use the recursive_motif to get the value of nodes and motifs
+then we can use some cluster methods to get the cluster of nodes.
+'''
+
 def main(delimiter, data, out, num):
-    model = recursive_motif.recursive_motif(datafile= data, outfile= out, delimiter = )
+    delimiter = settings.FIELD_DELIMITER[delimiter] if delimiter in settings.FIELD_DELIMITER.keys() else delimiter
+    fw = open(out,"w+")
+    model = recursive_motif.recursive_motif(datafile= data, delimiter = delimiter,motifEle = 3)
+    model.Get_init_value()
+    model.Iteration(num)
+    nodevalue = model.NodeValue()
+
+    fw.writable(nodevalue)
+    print nodevalue
 
 
 if __name__ == "__main__":
